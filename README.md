@@ -42,10 +42,6 @@ Per installare *wordnet* è necessario digitare:
 >>> nltk.download('wordnet')
 ```
 
-Qualora dovessero esserci problemi legati al certificato SSL nell'eseguire questa operazione, utilizzare lo script denominato *nltk_install.py*, digitando:
-```bash
-> python nltk_install.py
-```
 ## Utilizzo
 
 Una volta installati i requisti possiamo eseguire il codice.
