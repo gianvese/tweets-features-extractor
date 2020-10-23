@@ -59,9 +59,9 @@ e una volta installato, eseguire come nel seguente esempio:
 per ottenere i tweet contenenti l'hashtag "#marmomac" pubblicati nelle date indicate e che salverà i link trovati nel file da noi indicato.
 
 
-### Esecuzione completa
+### Esecuzione
 
-Per l'esecuzione completa prenderemo come anno di riferimento i tweet del 2019.
+Per l'esecuzione prenderemo come anno di riferimento i tweet del 2019.
 Cominciamo dalla creazione del dataset con *from_id_scraper.py*, script che, preso un file di testo in input contenente i link ai tweet, recupera tramite le API di Twitter le informazioni necessarie per ogni tweet e le salva in un file CSV, situato in  *./datasets/*, utilizzabile per l'estrazione delle features:
 ```bash
 > python from_id_scraper.py ./ids/marmomac_2019_tweets.txt ./datasets/marmomac_2019_tweets.csv
@@ -73,10 +73,4 @@ Il dataset creato verrà utilizzato come input per l'estrattore di features il q
 Infine, per creare un report sulla matrice appena calcolata, utilizzando il data profiling di pandas con:
 ```bash
 > python data_profiling.py ./matrices/marmomac_2019_matrix.csv ./data_profiling/marmomac_2019_matrix_profiling.html
-```
-### Esecuzione del solo estrattore
-
-Nel caso si voglia testare il solo estrattore è possibile eseguire il seguente comando che prende un dataset precedentemente creato (in questo caso con i tweet del 2020) e il cui data profiling è presente nella directory *./data_profiling/*:
-```bash
-> python features_extractor ./datasets/marmomac_2020_tweets.csv ./matrices/marmomac_2020_matrix.csv
 ```
